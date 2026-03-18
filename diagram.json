@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+   
+  "parts": [
+    {
+      "id": "0",
+      "type": "board-esp32-s3-devkitc-1",
+      "left": 0,
+      "top": 100,
+      "attrs": {
+
+      }
+    },
+    {
+      "id": "1",
+      "type": "board-ssd1306",
+      "left": 150,
+      "top": 330,
+      "attrs": {
+        
+      }
+    },
+    {
+        "id": "R2",
+        "type": "wokwi-led",
+        "left": 100,
+        "top": 60,
+        "attrs": {
+            "color": "red"
+        }
+    },
+    {
+        "id": "R1",
+        "type": "wokwi-led",
+        "left": 130,
+        "top": 60,
+        "attrs": {
+            "color":"blue"
+        }
+    }
+  ],
+  "connections": [
+    ["0:GND.3","1:GND","black",[]],
+    ["0:GND.2","R1:C","black",[]],
+    ["0:GND.2","R2:C","black",[]],
+    ["0:3V3.2","R1:A","red",[]],
+    ["0:3V3.2","R2:A","red",[]],
+    ["0:3V3.1","1:VCC","red",[]],
+    ["0:17","1:SCL","green",[]],
+    ["0:18","1:SDA","green",[]]
+  ],"serialMonitor": {
+    "collapse": false,
+    "convertEol": false,
+    "display": "always",
+    "newline": "lf"
+  }
+}
